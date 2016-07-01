@@ -45,7 +45,7 @@ app.delete('/meetings', (request, response) => {
 
 app.listen(app.get('port'), console.log('Node app is running on port... ', app.get('port')));
 
-var dbConnectionPath = process.env.MONGOLAB_URI || 'mongodb://localhost/mcc2';
+var dbConnectionPath = process.env.MONGODB_URI || 'mongodb://localhost/mcc2';
 mongoose.connect(dbConnectionPath, (err, res) => {
   if (err) {
     console.log('Error connecting to: ' + dbConnectionPath + '. ' + err);
